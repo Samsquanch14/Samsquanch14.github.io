@@ -29,3 +29,5 @@ def Triangle(a_turtle, dist_forward):
   for loop in range(3): 
     a_turtle.forward(dist_forward)
     a_turtle.left(120)
+
+link: https://repl.it/@Samsquanch14/Python-3
