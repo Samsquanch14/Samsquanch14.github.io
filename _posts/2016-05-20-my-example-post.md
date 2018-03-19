@@ -2,11 +2,30 @@
 layout: post
 ---
 
-Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
+Code for drawing in turtle
 
-{% comment %}
-Might you have an include in your theme? Why not try it here!
-{% include my-themes-great-include.html %}
-{% endcomment %}
+import turtle
+random #importing turtle to draw and random for random colors. 
+a=turtle.Turtle()
 
-No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.
+colors = ["red","green","blue","orange","purple","pink","yellow",] # a list of colors to randomly be chosen from
+
+def Octastar(a_turtle, size): 
+  a_turtle.width(10) # pen width for turtle 
+  a_turtle.speed(8) # the speed the turtle goes (0-10) 
+  length = 5 # length of line created by turtle move function for count in range(size): 
+  color = random.choice(colors) #Chooses a random color 
+  a_turtle.forward(length) 
+  a_turtle.right(135)
+  a_turtle.color(color) # Changes turtle color to the random color chosen by the computer 
+  length = length + 5 # Gradually increases size if the line created by turtle
+
+def Triangle(a_turtle, dist_forward): 
+  color = random.choice(colors)
+  a_turtle.color(color) 
+  a_turtle.width(5) 
+  a_turtle.speed(5) 
+  length = 5 
+  for loop in range(3): 
+    a_turtle.forward(dist_forward)
+    a_turtle.left(120)
